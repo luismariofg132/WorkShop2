@@ -3,6 +3,7 @@ import InicioSesion from "../components/InicioSesion";
 import Menu from "../components/Menu";
 import Perfil from "../components/Perfil";
 import Principal from "../components/Principal";
+import Registro from "../components/Registro";
 import '../styles/index.css'
 
 export const AppRouter = () => {
@@ -16,6 +17,7 @@ export const AppRouter = () => {
                     <Route path="/Menu" element={<Menu />} />
                     <Route path="/principal" element={<Principal />} />
                     <Route path="/perfil" element={<Perfil />} />
+                    <Route path="/registro" element={<Registro />} />
                 </Routes>
             </Router>
         </div>
