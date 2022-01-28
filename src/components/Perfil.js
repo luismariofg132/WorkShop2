@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonPerfil, IMGStylesPerfil, SpanStylesPerfil } from '../styles/PerfilStyles';
+import { ButtonPerfil, IMGStylesPerfil, SpanPerfil, SpanStylesPerfil } from '../styles/PerfilStyles';
 import Menu from './Menu';
 
 const Perfil = () => {
@@ -8,6 +8,7 @@ const Perfil = () => {
 
     const cerrarSesion = () => {
         localStorage.removeItem('user')
+        window.location.href = "/"
     }
 
     return (
