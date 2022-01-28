@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import InicioSesion from "../components/InicioSesion";
 import Menu from "../components/Menu";
+import Perfil from "../components/Perfil";
 import Principal from "../components/Principal";
 import '../styles/index.css'
 
@@ -14,6 +15,7 @@ export const AppRouter = () => {
                     <Route path="/" element={<InicioSesion />} />
                     <Route path="/Menu" element={<Menu />} />
                     <Route path="/principal" element={<Principal />} />
+                    <Route path="/perfil" element={<Perfil />} />
                 </Routes>
             </Router>
         </div>

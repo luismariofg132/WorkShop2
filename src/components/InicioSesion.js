@@ -32,7 +32,7 @@ const InicioSesion = () => {
                 else if (usuarioExistente !== "") {
                     if (usuarioExistente.contraseña === contraseña) {
                         localStorage.setItem('user', usuarioExistente.nombreUsuario)
-                        window.location.href = "/principal"
+                        window.location.href = "/menu"
                     }
                     else {
                         alert('contraseña incorrecta')
