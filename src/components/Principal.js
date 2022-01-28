@@ -1,5 +1,4 @@
 import React from 'react';
-import { endpointHtml, endpointPrincipal } from '../helpers/url';
 import { CardImg, CardsContainer, PrincipalDiv, CardLink } from '../styles/PrincipalStyles';
 import { Link } from 'react-router-dom';
 

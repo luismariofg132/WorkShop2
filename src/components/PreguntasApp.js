@@ -2,7 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { ColDiv, FormButton, OptionDiv, Options, PreguntasDiv, RowDiv } from '../styles/PreguntasAppStyles';
 import PreguntasNav from './PreguntasNav';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { endpointPrincipal } from '../helpers/url';
 import { useParams } from 'react-router-dom';
 
