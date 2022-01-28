@@ -60,7 +60,7 @@ const InicioSesion = () => {
             </div>
             <div>
                 <LabelStyleIS>Contraseña</LabelStyleIS>
-                <InputStyledIS type="text" name='contraseña' value={contraseña} onChange={handleInputChange} />
+                <InputStyledIS type="password" name='contraseña' value={contraseña} onChange={handleInputChange} />
             </div>
             <ButtonStyledIS type='submit'>Iniciar Sesion</ButtonStyledIS>
         </form>
