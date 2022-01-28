@@ -1,8 +1,12 @@
+import Menu from "../components/Menu";
+import Principal from "../components/Principal";
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Hola mundo</h1>
+      <Principal />
+      <Menu />
     </div>
   );
 }

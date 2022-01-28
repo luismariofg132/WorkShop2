@@ -2,6 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import { useState } from 'react';
 import { endpointUsuarios } from '../helpers/url'
+import { DivStyled, InputStyledIS, LabelStyleIS, SpanStyledIS, ButtonStyledIS } from '../styles/InicioSesionStyled';
+
 
 const InicioSesion = () => {
 
@@ -11,6 +13,7 @@ const InicioSesion = () => {
     });
 
     const { nombreUsuario, contraseña } = usuario
+
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -28,9 +31,8 @@ const InicioSesion = () => {
 
                 else if (usuarioExistente !== "") {
                     if (usuarioExistente.contraseña === contraseña) {
-                        alert('Usuario Verificado')
                         localStorage.setItem('user', usuarioExistente.nombreUsuario)
-
+                        window.location.href = "/principal"
                     }
                     else {
                         alert('contraseña incorrecta')
@@ -49,19 +51,20 @@ const InicioSesion = () => {
         })
         console.log(usuario)
     }
-    return <div>
+    return <DivStyled>
+        <SpanStyledIS>Inicio de sesion</SpanStyledIS>
         <form onSubmit={handleSubmit}>
             <div>
-                <label>Nombre de usuario</label>
-                <input type="text" name="nombreUsuario" value={nombreUsuario} onChange={handleInputChange} />
+                <LabelStyleIS>Nombre de usuario</LabelStyleIS>
+                <InputStyledIS type="text" name="nombreUsuario" value={nombreUsuario} onChange={handleInputChange} />
             </div>
             <div>
-                <label>Contraseña</label>
-                <input type="text" name='contraseña' value={contraseña} onChange={handleInputChange} />
+                <LabelStyleIS>Contraseña</LabelStyleIS>
+                <InputStyledIS type="text" name='contraseña' value={contraseña} onChange={handleInputChange} />
             </div>
-            <button type='submit' >Buscar</button>
+            <ButtonStyledIS type='submit'>Iniciar Sesion</ButtonStyledIS>
         </form>
-    </div>;
+    </DivStyled>;
 };
 
 export default InicioSesion;
