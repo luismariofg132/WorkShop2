@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import InicioSesion from "../components/InicioSesion";
 import Menu from "../components/Menu";
 import PreguntasApp from "../components/PreguntasApp";
+import Perfil from "../components/Perfil";
 import Principal from "../components/Principal";
 import '../styles/index.css'
 
@@ -16,6 +17,7 @@ export const AppRouter = () => {
                     <Route path="/Menu" element={<Menu />} />
                     <Route path="/principal" element={<Principal />} />
                     <Route path="/preguntas" element={<PreguntasApp />} />
+                    <Route path="/perfil" element={<Perfil />} />
                 </Routes>
             </Router>
         </div>
