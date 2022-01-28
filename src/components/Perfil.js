@@ -4,7 +4,12 @@ import Menu from './Menu';
 
 const Perfil = () => {
 
-    const user = localStorage.getItem('user');
+    const user = localStorage.getItem('user') || 'No se ha iniciado sesión'
+
+    const cerrarSesion = () => {
+        localStorage.removeItem('user')
+        window.location.href = "/"
+    }
 
     return (
         <>
@@ -13,7 +18,7 @@ const Perfil = () => {
 
                 <SpanStylesPerfil>{user}</SpanStylesPerfil>
 
-                <ButtonPerfil>Cerrar Sesión</ButtonPerfil>
+                <ButtonPerfil onClick={() => cerrarSesion()} >Cerrar Sesión</ButtonPerfil>
             </div>
             <Menu />
         </>

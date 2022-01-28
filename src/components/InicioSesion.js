@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useState } from 'react';
 import { endpointUsuarios } from '../helpers/url'
-import { DivStyled, InputStyledIS, LabelStyleIS, SpanStyledIS, ButtonStyledIS } from '../styles/InicioSesionStyled';
+import { DivStyled, InputStyledIS, LabelStyleIS, SpanStyledIS, ButtonStyledIS, IMGIS } from '../styles/InicioSesionStyled';
 
 
 const InicioSesion = () => {
@@ -52,6 +52,7 @@ const InicioSesion = () => {
         console.log(usuario)
     }
     return <DivStyled>
+        <IMGIS src='https://res.cloudinary.com/ddgyxfetd/image/upload/v1643395417/Clase25Enero/Logo_frchbm.png' alt='logo' />
         <SpanStyledIS>Inicio de sesion</SpanStyledIS>
         <form onSubmit={handleSubmit}>
             <div>
@@ -60,7 +61,7 @@ const InicioSesion = () => {
             </div>
             <div>
                 <LabelStyleIS>Contraseña</LabelStyleIS>
-                <InputStyledIS type="text" name='contraseña' value={contraseña} onChange={handleInputChange} />
+                <InputStyledIS type="password" name='contraseña' value={contraseña} onChange={handleInputChange} />
             </div>
             <ButtonStyledIS type='submit'>Iniciar Sesion</ButtonStyledIS>
         </form>
