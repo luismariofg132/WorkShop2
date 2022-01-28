@@ -6,7 +6,6 @@ import Perfil from "../components/Perfil";
 import Principal from "../components/Principal";
 import Registro from "../components/Registro";
 import '../styles/index.css'
-import { useState } from "react";
 
 export const AppRouter = () => {
 
