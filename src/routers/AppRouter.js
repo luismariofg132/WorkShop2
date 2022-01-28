@@ -9,8 +9,6 @@ import '../styles/index.css'
 import { useState } from "react";
 
 export const AppRouter = () => {
-    const [datos, setdatos] = useState([]);
-
 
     return (
         <div>
