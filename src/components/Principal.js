@@ -1,19 +1,27 @@
 import React from 'react';
+import { endpointHtml, endpointPrincipal } from '../helpers/url';
 import { CardImg, CardsContainer, PrincipalDiv, CardLink } from '../styles/PrincipalStyles';
+import { Link } from 'react-router-dom';
 
 const Principal = () => {
-  return (
-      <PrincipalDiv>
-          <p>Practica tus conocmientos en la categoría que prefieras.</p>
-          <CardsContainer className='cards-container'>
-                <div className='card'>
-                    <div className='card-img'>
-                        <CardImg src='https://www.iconninja.com/files/306/245/260/technologies-front-end-markup-language-long-shadow-web-web-technology-html-icon.svg' />
+    const html = "html"
+    const Css = "css"
+    const JavaScript = "javascript"
+
+    return (
+        <PrincipalDiv>
+            <p>Practica tus conocmientos en la categoría que prefieras.</p>
+            <CardsContainer className='cards-container'>
+                <Link to={`/preguntas`}>
+                    <div className='card'>
+                        <div className='card-img'>
+                            <CardImg src='https://www.iconninja.com/files/306/245/260/technologies-front-end-markup-language-long-shadow-web-web-technology-html-icon.svg' />
+                        </div>
+                        <div className='card-text'>
+                            <CardLink>HTML</CardLink>
+                        </div>
                     </div>
-                    <div className='card-text'>
-                        <CardLink href='#'>HTML</CardLink>
-                    </div>
-                </div>
+                </Link>
                 <div className='card'>
                     <div className='card-img'>
                         <CardImg src='https://lh3.googleusercontent.com/p-eb6zVOZqqZTGqLfwGP5V4ixuKtwRJJq5RmvHexIQYUaRZ5Ya9OxMdbsFWqIpStjGfoCg=s85' />
@@ -30,10 +38,10 @@ const Principal = () => {
                         <CardLink href='#'>JavaScript</CardLink>
                     </div>
                 </div>
-          </CardsContainer>
+            </CardsContainer>
 
-      </PrincipalDiv>
-  );
+        </PrincipalDiv>
+    );
 };
 
 export default Principal;
