@@ -7,6 +7,7 @@ import Principal from "../components/Principal";
 import Registro from "../components/Registro";
 import '../styles/index.css'
 
+
 export const AppRouter = () => {
 
     return (

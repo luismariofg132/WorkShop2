@@ -18,6 +18,8 @@ const PreguntasApp = () => {
     setpregunta2(resp)
   }
 
+
+  PreguntaPeticio()
   return (
     <PreguntasDiv>
       <PreguntasNav />
