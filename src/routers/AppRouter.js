@@ -7,6 +7,7 @@ import Principal from "../components/Principal";
 import Registro from "../components/Registro";
 import '../styles/index.css'
 
+
 export const AppRouter = () => {
 
     return (
@@ -20,6 +21,7 @@ export const AppRouter = () => {
                     <Route path="/preguntas" element={<PreguntasApp />} />
                     <Route path="/perfil" element={<Perfil />} />
                     <Route path="/registro" element={<Registro />} />
+                    
                 </Routes>
             </Router>
         </div>

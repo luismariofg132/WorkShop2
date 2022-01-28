@@ -43,6 +43,7 @@ padding: 12px 16px;
 width: 100%;
 height: 35px;
 margin-top: 10px;
+margin-bottom: 20px;
 &:hover{
     background: #D94334;
 }

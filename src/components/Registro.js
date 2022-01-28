@@ -3,6 +3,8 @@ import { DivStyled, InputStyledIS, LabelStyleIS, SpanStyledIS, ButtonStyledIS } 
 import axios from 'axios';
 import { useState } from 'react';
 import { endpointUsuarios } from '../helpers/url'
+import Listar from './Listar';
+
 
 const Registro = () => {
 
@@ -59,9 +61,13 @@ const Registro = () => {
           <LabelStyleIS>Contraseña</LabelStyleIS>
           <InputStyledIS type="password" name='contraseña' value={contraseña} onChange={handleInputChange} />
       </div>
+     
       <ButtonStyledIS type='submit' onClick={() => postData()}>Registrar</ButtonStyledIS>
+      
   </form>
+  <div><Listar/></div>
 </DivStyled>;
+
 };
 
 export default Registro;

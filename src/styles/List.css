@@ -1,0 +1,17 @@
+.tabla{
+    color: white;
+    border: 1px solid #EF4565;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    margin-top: 5%; 
+    padding-right: 4%;
+    background-color: rgba(230, 201, 163, 0.185);
+}
+button{
+    background: #EF4565;
+border-radius: 4px;
+border: tomato;
+color: white;
+
+}
