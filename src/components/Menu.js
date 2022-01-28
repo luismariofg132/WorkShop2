@@ -8,7 +8,7 @@ const Menu = () => {
                 <NavDiv>
                     <ItemDiv>
                         <ItemIcon src='https://res.cloudinary.com/karma09-jm/image/upload/v1643383270/Daily%20Bit/Property_1_home_zaaacq.svg' alt='home' />
-                        <MenuLink href='#'>Home</MenuLink>
+                        <MenuLink href='/principal'>Home</MenuLink>
                     </ItemDiv>
                     <ItemDiv>
                         <ItemIcon src='https://res.cloudinary.com/karma09-jm/image/upload/v1643383270/Daily%20Bit/Property_1_activity_xk1tlq.svg' alt='Estadisticas' />
