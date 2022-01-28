@@ -18,14 +18,6 @@ const PreguntasApp = () => {
     setpregunta2(resp)
   }
 
-
-
-  // useEffect(() => {
-  //   ;
-  // }, []);
-
-
-  PreguntaPeticio()
   return (
     <PreguntasDiv>
       <PreguntasNav />

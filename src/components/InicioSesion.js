@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { endpointUsuarios } from '../helpers/url'
 import { DivStyled, InputStyledIS, LabelStyleIS, SpanStyledIS, ButtonStyledIS, IMGIS } from '../styles/InicioSesionStyled';
+import { Link } from 'react-router-dom';
 
 
 const InicioSesion = () => {
@@ -65,6 +66,7 @@ const InicioSesion = () => {
             </div>
             <ButtonStyledIS type='submit'>Iniciar Sesion</ButtonStyledIS>
         </form>
+        <Link to="/registro" className='linkRegistro'>Registrase</Link>
     </DivStyled>;
 };
 
