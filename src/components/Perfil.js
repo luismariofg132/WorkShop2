@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonPerfil, IMGStylesPerfil, SpanPerfil, SpanStylesPerfil } from '../styles/PerfilStyles';
+import { ButtonPerfil, IMGStylesPerfil, SpanStylesPerfil } from '../styles/PerfilStyles';
 import Menu from './Menu';
 
 const Perfil = () => {
