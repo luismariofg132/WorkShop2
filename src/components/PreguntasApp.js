@@ -4,22 +4,33 @@ import { ColDiv, FormButton, OptionDiv, Options, PreguntasDiv, RowDiv } from '..
 import PreguntasNav from './PreguntasNav';
 import { useState, useEffect } from 'react';
 import { endpointPrincipal } from '../helpers/url';
+import { useParams } from 'react-router-dom';
 
 const PreguntasApp = () => {
 
   const [pregunta2, setpregunta2] = useState([]);
+  const [id, setid] = useState(1)
 
   const { pregunta, opcion1, opcion2, opcion3 } = pregunta2
 
-  const idPre = 1;
-  const PreguntaPeticio = async () => {
-    const preg = await axios.get(endpointPrincipal + "html/" + idPre)
+  const { lenguaje } = useParams()
+
+
+  const PreguntaPeticio = async (idPre) => {
+    const preg = await axios.get(endpointPrincipal + lenguaje + "/" + id)
     const resp = await preg.data
     setpregunta2(resp)
   }
 
+  const idP = 1
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
 
-  PreguntaPeticio()
+  const siguiente = () => {
+    setid(id + 1)
+  }
+  PreguntaPeticio(idP)
   return (
     <PreguntasDiv>
       <PreguntasNav />
@@ -32,7 +43,7 @@ const PreguntasApp = () => {
         </ColDiv>
       </RowDiv>
       <Options>
-        <form>
+        <form onSubmit={handleSubmit}>
 
           <OptionDiv>
             <option>{opcion1}</option>
@@ -43,8 +54,8 @@ const PreguntasApp = () => {
           <OptionDiv>
             <option>{opcion3}</option>
           </OptionDiv>
-          <FormButton>COMPROBAR</FormButton>
         </form>
+        <FormButton type='submit' onClick={siguiente}>COMPROBAR</FormButton>
       </Options>
     </PreguntasDiv>
   );
